@@ -88,21 +88,21 @@ ORDER BY "Start Year", "Continent","Country","Region","Disaster Group", "Disaste
 
 ## *Analysis*
 
-**1.**  Where in the world are the highest number of natural disasters happening?
-Per the recorded data, natural disasters have occured the most in the US, China,Inia, Phillipines and Indonesia from 1900 to 2021.
+**1.  Where on the globe are the highest number of natural disasters happening?**  
+Per the recorded data, natural disasters have occured the most in the US, China,India, Phillipines and Indonesia from 1900 to 2021.
 
 ![image](https://user-images.githubusercontent.com/110743067/185026599-8651fdb4-eaa1-49fe-863a-c284b2e44187.png)
 
 ##
 
-**2.**  How have natural disasters changed over time, and have they increased or decreased?
-The data is ahowing that natural diasters have steadly increased starting in the 1950s, with a more dramatic incline starting around 1997. This could be because collecting data about disasters has become easier than it was in the early-mid 1900s. Furthur reseach would need to be done to conclude this.
+**2.  How have natural disasters changed over time, and have they increased or decreased?**   
+The data is showing that natural diasters have steadly increased starting in the 1950s, with a more dramatic incline starting around 1997. This could be because collecting data about disasters has become easier than it was in the early-mid 1900s. Furthur reseach would need to be done to conclude this.
 
 ![image](https://user-images.githubusercontent.com/110743067/185026686-61a5a6a3-5800-4187-8163-651e41958f67.png)
 
 ##
 
-**3.**  Which types of natural disasters happen the most frequently, and has this changed over time?
+**3.  Which types of natural disasters happen the most frequently, and has this changed over time?**   
 Floods and storm account for 63.6% of natural disasters worldwide. Both have seen increases starting around the 1950s. 
 
 ![image](https://user-images.githubusercontent.com/110743067/185026708-b25829a4-dcea-4add-8fc1-c8a6d68316a6.png)
