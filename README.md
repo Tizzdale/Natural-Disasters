@@ -20,7 +20,65 @@ Num. of records: 25650
 
 ## *Process*
 
+SELECT "Total Damages"
+FROM Disasters
+LIMIT 100;
 
+
+```#Counted rows to confirm that the Dis_No colum was unique
+SELECT COUNT("Dis No") 
+FROM Disasters; 
+
+SELECT COUNT(DISTINCT("Dis No")) 
+FROM Disasters;```
+
+```#Identifying the time frame I am looking at
+SELECT DISTINCT("Start Year")
+FROM Disasters
+ORDER BY "Start Year";```
+
+```#Identifying the fields that I want to see data on
+SELECT "Dis No","Disaster Group", "Disaster Type", "Country", "Region", "Continent","Start Year", "End Year", "Total Deaths", "Total Affected", "Total Damages, Adjusted ('000 US$)"
+FROM Disasters
+LIMIT 1000;```
+
+```#Renamed column to make it shorter and clearer
+ALTER TABLE Disasters
+RENAME COLUMN "Total Damages, Adjusted ('000 US$)" TO "Total Damages"```
+
+```#Added "Unknown" in place of Total Deaths, Total Affected and Total Damages so that we have a value if needed on later visulazation
+UPDATE Disasters
+SET "Total Deaths" = "Unknown"
+WHERE "Total Deaths" IS NULL;
+
+UPDATE Disasters
+SET "Total Affected" = "Unknown"
+WHERE "Total Affected" IS NULL;
+
+UPDATE Disasters 
+SET "Total Damages" = "Unknown"
+WHERE "Total Damages" IS NULL;```
+
+```#Identifying the data that I want to export to turn into a visualization 
+SELECT "Dis No","Disaster Group", "Disaster Type", "Country", "Region", "Continent","Start Year", "End Year", "Total Deaths", "Total Affected", "Total Damages"
+FROM Disasters
+ORDER BY "Start Year", "Continent","Country","Region","Disaster Group", "Disaster Type";```
+
+```# Removed (the) from COuntry column to make sure there are no issues for visualization
+UPDATE Disasters 
+SET "Country" = REPLACE(Country, ' (the)', '');```
+
+UPDATE Disasters 
+SET "Country" = REPLACE(Country, ' (Province of China)', '');
+
+UPDATE Disasters 
+SET "Country" = REPLACE(Country, ' (Islamic Republic of)', '');
+
+UPDATE Disasters 
+SET "Country" = REPLACE(Country, ' of Great Britain and Northern Ireland', '');
+
+SELECT *
+FROM Disasters;
 
 
 ![image](https://user-images.githubusercontent.com/110743067/185005689-54478223-d14f-4d5f-b73a-e07b8229bcdd.png)
